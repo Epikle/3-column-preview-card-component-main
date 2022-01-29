@@ -109,7 +109,8 @@ li a {
   transition: all 250ms ease;
 }
 
-li a:hover {
+li a:hover,
+li a:focus {
   background: transparent;
   color: var(--color-white-tp);
 }
