@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-orange: hsl(31, 77%, 52%);
+  --color-cyan-500: hsl(184, 100%, 22%);
+  --color-cyan-800: hsl(179, 100%, 13%);
+
+  --color-white-tp: hsla(0, 0%, 100%, 0.75);
+  --color-gray-100: hsl(0, 0%, 95%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--color-white-tp);
+  background: var(--color-gray-100);
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: start;
+  min-height: calc(100vh - 2rem);
+  padding: 1rem;
+}
+
+h1 {
+  color: var(--color-cyan-500);
+  text-align: center;
+  align-self: center;
+  padding: 1rem;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 57.5rem;
+  border-radius: 10px;
+  list-style: none;
+  overflow: hidden;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+li:first-of-type {
+  background: var(--color-orange);
+  color: var(--color-orange);
+}
+
+li:nth-of-type(2) {
+  background: var(--color-cyan-500);
+  color: var(--color-cyan-500);
+}
+
+li:last-of-type {
+  background: var(--color-cyan-800);
+  color: var(--color-cyan-800);
+}
+
+li img {
+  width: 4rem;
+}
+
+li h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  color: var(--color-white-tp);
+}
+
+li p {
+  line-height: 1.6;
+  opacity: 0.75;
+  color: var(--color-white-tp);
+}
+
+li div {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 5rem;
+}
+
+li a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+  background: var(--color-white-tp);
+  outline: 2px solid var(--color-white-tp);
+  border-radius: 100vw;
+  padding: 0.75rem 2rem;
+
+  transition: all 250ms ease;
+}
+
+li a:hover {
+  background: transparent;
+  color: var(--color-white-tp);
+}
+
+footer {
+  height: 2rem;
+  font-size: 11px;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: var(--color-cyan-800);
+}
+
+footer a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+
+  li div {
+    padding-top: 2rem;
+  }
+}
